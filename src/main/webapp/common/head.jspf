@@ -1,0 +1,16 @@
+<%@page contentType="text/html; charset=utf-8" language="java" import="java.util.*" errorPage="" pageEncoding="utf-8" %>
+<script type="text/javascript" src="<%=basePath%>common/codebase/suite.js"></script>
+<link rel="stylesheet" href="<%=basePath%>common/codebase/suite.css">
+<link rel="stylesheet" href="<%=basePath%>common/css/icon.css">
+<link rel="stylesheet" href="<%=basePath%>common/css/index.css">
+<link href="<%=basePath%>common/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript" src="<%=basePath%>model/apsRegular/config.js"></script>
+<script type="text/javascript" src="<%=basePath%>model/apsSchedule/config.js"></script>
+<script type="text/javascript" src="<%=basePath%>model/apsSetting/config.js"></script>
+<script type="text/javascript" src="<%=basePath%>model/apsAutoSend/config.js"></script>
+<script type="text/javascript" src="<%=basePath%>model/apsConfirm/config.js"></script>
+<script type="text/javascript" src="<%=basePath%>model/tabberMenu/config.js"></script>
+<script type="text/javascript" src="<%=basePath%>model/portal/config.js"></script>
+

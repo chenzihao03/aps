@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!--定义日志保存的路径-->
+	<property name="LOG_HOME" value="d:/logs" />
+
+	<!--定义一个控制台输出器，名为console-->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<!--按pattern指定的格式输出日志，编码为UTF-8-->
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread]  %logger{30} - %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+	<!--定义一个日滚动（每天生成一份）的日志文件-->
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!--按pattern指定的格式输出日志，编码为UTF-8-->
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread]  %logger{30} - %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<!-- 定义保存的文件名 -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!--%d{yyyy-MM-dd}代表每天生成一个新的日志-->
+			<fileNamePattern>${LOG_HOME}/mysprintboot_%d{yyyy-MM-dd}.log</fileNamePattern>
+			<!--日志最多保存90天，也就是90份-->
+			<maxHistory>50</maxHistory>
+		</rollingPolicy>
+		<!-- 在日滚动文件中，强制只保存错误INFO级别以上信息 -->
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<logger name="org.springframework" level="error" >
+		<appender-ref ref="file" />
+	</logger>
+	<logger name="org.apache" level="error" >
+		<appender-ref ref="file" />
+	</logger>
+	
+	<logger name="com.alibaba.druid.filter" level="error">
+		<appender-ref ref="file" />
+	</logger>
+	
+	<logger name="com.emis.aps" level="debug" >
+		<appender-ref ref="file" />
+	</logger>
+	
+	<!-- 定义日志全局最低输出级别是INFO，同时向控制台和日滚动文件输出 -->
+	<root level="INFO">
+		<appender-ref ref="console" />
+		<appender-ref ref="file" />
+	</root>
+</configuration>

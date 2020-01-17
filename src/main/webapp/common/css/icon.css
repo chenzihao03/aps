@@ -1,0 +1,85 @@
+.dhx_toolbar-button:hover {
+    background-color: transparent;
+}
+
+.dhx_navbar--vertical {
+    overflow: hidden;
+}
+
+.user-info_container {
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user-info_avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.user-info_title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+.user-info_contact {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 28px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.dhx_sidebar--minimized .user-info_avatar {
+    height: 30px;
+    width: 30px;
+}
+
+.dhx_sidebar--minimized .user-info_title,
+.dhx_sidebar--minimized .user-info_contact {
+    visibility: hidden;
+}
+
+.custom-class .dhx_tabbar-tab-button--active {
+    background-color: gray;
+    color: white;
+}
+
+.custom-class .dhx_tabbar-header-active {
+    background-color: green;
+}
+
+.mdi-bell1 {
+    color: white;
+}
+
+.custom-class {
+    background-color: #304156;
+}
+
+.custom-class li:not(.dhx_sidebar__item--separator) {
+    padding: 5px 0;
+}
+
+.custom-class li .mdi {
+    color: white;
+}
+
+/*树的高度*/
+.dhx_widget .dhx_widget--bg_gray {
+    height: 100%
+}
+
+/*时间字段居中显示*/
+.dhx_grid-cell.dhx_date-cell {
+    text-align: center;
+}

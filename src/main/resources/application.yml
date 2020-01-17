@@ -1,0 +1,73 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: mes_159
+    password: mes_159
+
+    name: masterdb
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbType: oracle
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x' FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #设置过滤器 stat用于接收状态，wall防止sql注入，logback说明使用logback进行日志输出
+    filters: stat,wall,slf4j
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+  resources:
+    static-locations: /**
+  mvc:
+    date-format: yyyy-MM-dd
+    view:
+      prefix: /templates/
+      suffix: .html
+  redis:
+    #数据库索引
+    database: 0
+    host: 127.0.0.1:6379
+    port: 6379
+    password:
+    #连接超时时间
+    timeout: 10000
+    jedis:
+      pool:
+        #最大连接数
+        max-active: 8
+        #最大阻塞等待时间(负数表示没限制)
+        max-wait: -1
+        #最大空闲
+        max-idle: 8
+        #最小空闲
+        min-idle: 0
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss SSS
+    serialization:
+      indent-output: true
+server:
+  port: 8009
+  servlet:
+    context-path: /aps
+  tomcat:
+    uri-encoding: utf-8
+beetlsql:
+  basePackage:  com.emis.aps
+  #控件台输出
+  dev: true
+#mybatis:
+#  config-location: classpath:/mybatis/mybatis-config.xml
+#  mapper-locations: classpath:/mybatis/mapper/*.xml
