@@ -70,7 +70,7 @@
     function getTime() {
         var myDate = new Date();
         var hours = myDate.getHours();
-        var minutes = myDate.getMinutes();
+        var minutes = myDate.getMinutes() < 10 ? "0" + myDate.getMinutes() : myDate.getMinutes();
         $(".times").html(hours + ":" + minutes); //将值赋给div
     }
 </script>
