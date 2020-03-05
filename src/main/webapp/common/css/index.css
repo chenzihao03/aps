@@ -35,6 +35,25 @@ body :-ms-input-placeholder {
     font-weight: bolder;
 }
 
+::-webkit-scrollbar {
+    width: 10px; /*对垂直流动条有效*/
+    height: 10px; /*对水平流动条有效*/
+}
+
+/*定义滚动条轨道 内阴影*/
+::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+/*定义滑块 内阴影*/
+::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background: rgba(174, 174, 174, 0.39);
+}
+
 .wrapper {
     background-color: #2d3a4b;
     background-size: 100% 100%;

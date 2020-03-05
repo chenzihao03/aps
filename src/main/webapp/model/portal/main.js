@@ -76,7 +76,7 @@ sidebar.events.on("click", function (id, e) {
     if (id === "toggle") {
         var toggleItem = sidebar.data.getItem("toggle");
         sidebar.toggle();
-        if (sidebar.config.collapsed) {
+        if (com.emis.config.collapsed) {
             toggleItem.icon = "mdi mdi-menu";
         } else {
             toggleItem.icon = "mdi mdi-backburger";

@@ -1,4 +1,4 @@
-package com.emis.aps.config;
+package com.emis.config;
 
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.boot.web.server.ErrorPage;
