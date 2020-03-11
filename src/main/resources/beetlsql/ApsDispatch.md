@@ -42,9 +42,4 @@ select #{page(
    and i.item_no = h.item_no
    and t.time_flag = 0
    and ep_mes_sfc_basic.uf_get_qty_can_dispatch(d.id) > 0
-   and not
-        (exists
-         (select 'X' from e_sfc_order_detail_task r where r.result_id = t.id) or
-         exists
-         (select 'X' from e_sfc_dispatch_header dh where dh.result_id = t.id))
  Order By h.order_no, d.sequence_no ASC
