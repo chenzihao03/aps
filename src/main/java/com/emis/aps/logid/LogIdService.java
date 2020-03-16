@@ -1,4 +1,4 @@
-package com.emis.aps.service;
+package com.emis.aps.logid;
 
 import org.beetl.sql.core.SQLManager;
 import org.springframework.beans.factory.annotation.Autowired;
