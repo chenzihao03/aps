@@ -1,4 +1,4 @@
-package com.emis.aps.service;
+package com.emis.aps.apsgantt;
 
 import org.beetl.sql.core.SQLManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class ApsGanttReportService {
+public class ApsGanttService {
     @Autowired
     private SQLManager sqlManager;
 
