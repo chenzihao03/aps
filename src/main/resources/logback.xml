@@ -2,7 +2,7 @@
 <configuration>
 
 	<!--定义日志保存的路径-->
-	<property name="LOG_HOME" value="d:/logs" />
+	<property name="LOG_HOME" value="C:/logs" />
 
 	<!--定义一个控制台输出器，名为console-->
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
