@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@210.12.53.106:1521:orcl
+    url: jdbc:oracle:thin:@210.12.53.106:1521:orcl?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone =Asia/Shanghai
     username: mes_by
     password: mes_by
 
